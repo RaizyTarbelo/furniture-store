@@ -1,0 +1,17 @@
+<body>
+    <div class="update-container">
+        <h1>עדכון פרטים אישיים</h1>
+        <form class="update-form" (ngSubmit)="onSubmit()">
+            <label for="firstName">שם פרטי:</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" placeholder="הכנס שם פרטי" required>
+            
+            <label for="lastName">שם משפחה:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" placeholder="הכנס שם משפחה" required>
+            
+            <label for="phone">טלפון:</label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="user.phone" placeholder="הכנס טלפון" required>
+            
+            <button type="submit">עדכון</button>
+        </form>
+    </div>
+</body>

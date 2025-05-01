@@ -1,0 +1,7 @@
+<div class="gallery-container">
+    <div *ngFor="let item of items" class="gallery-item">
+        <div [routerLink]="['/item', item.productID]">
+            <app-chair [product]="item"></app-chair>
+        </div>
+    </div>
+</div>

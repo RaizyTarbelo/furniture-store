@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>פרטי הזמנה {{ orderId }}</h1>
+  <div class="table-container">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>שם מוצר</th>
+          <th>כמות</th>
+          <th>מחיר ליחידה לפני הנחה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orderItems">
+          <td>{{ item.productName }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.unitPrice | currency:'ILS' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="button-container">
+    <button class="btn btn-secondary" (click)="goBack()">Back to Orders</button>
+  </div>
+</div>

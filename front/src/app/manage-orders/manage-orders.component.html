@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="header">Your Orders</h1>
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Address</th>
+          <th>Total Price</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders" (click)="viewOrderItems(order.orderId)" class="order-row">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.totalPrice }}</td>
+          <td>{{ order.status }}</td>
+          <td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="click-hint">Click on an order to view its details.</p>
+  </div>
+  
